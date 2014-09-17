@@ -1,0 +1,36 @@
+{
+    "name" : "grouch",
+    "version" : "0.0.1",
+    "description" : "Run test files",
+    "author" : "Gyandeep Singh <gyandeeps@gmail.com>",
+    "license" : "MIT",
+    "repository" : "https://github.com/gyandeeps/grouch",
+    "main": "./lib/grouch.js",
+    "bin": {
+        "grouch" : "./bin/grouch.js"
+    },
+    "bugs" : {
+        "url" : "https://github.com/gyandeeps/grouch/issues"
+    },
+    "dependencies": {
+        "eslint": ">0.8.0"
+    },
+    "peerDependencies": {
+        "grunt": ">=0.4.0"
+    },
+    "engines": {
+        "node": ">=0.10.28"
+    },
+    "scripts": {
+    },
+    "keywords": [
+        "jasmine",
+        "grunt",
+        "eslint",
+        "test",
+        "istanbul",
+        "karma",
+        "javascript",
+        "code quality"
+    ]
+}
