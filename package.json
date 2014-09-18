@@ -5,7 +5,7 @@
     "author" : "Gyandeep Singh <gyandeeps@gmail.com>",
     "license" : "MIT",
     "repository" : "https://github.com/gyandeeps/grouch",
-    "main": "./lib/grouch.js",
+    "main": "./lib/api.js",
     "bin": {
         "grouch" : "./bin/grouch.js"
     },
@@ -13,15 +13,32 @@
         "url" : "https://github.com/gyandeeps/grouch/issues"
     },
     "dependencies": {
-        "eslint": ">0.8.0"
+        "eslint": ">=0.8.0",
+        "grunt-contrib-jasmine": ">=0.7.0",
+        "grunt-template-jasmine-istanbul": ">=0.3.0",
+        "optionator": ">=0.4.0",
+        "node-dir": ">=0.1.6",
+        "minimatch": ">=1.0.0"
+    },
+    "devDependencies": {
+        "mocha": ">=1.21.4",
+        "chai": ">=1.9.1",
+        "shelljs": "~0.3.0",
+        "istanbul": ">=0.3.2",
+        "eslint": ">=0.8.0",
+        "shelljs-nodecli": ">=0.1.1",
+        "jsdoc": "latest",
+        "sinon": ">=1.10.3"
     },
     "peerDependencies": {
-        "grunt": ">=0.4.0"
+        "grunt": ">=0.4.5"
     },
     "engines": {
         "node": ">=0.10.28"
     },
     "scripts": {
+        "test": "node Makefile test",
+        "docs": "node Makefile docs"
     },
     "keywords": [
         "jasmine",

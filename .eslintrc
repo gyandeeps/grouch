@@ -1,0 +1,26 @@
+{
+    "env": {
+        "node": true,
+        "browser": true
+    },
+    "rules": {
+        "strict": 0,
+        "quotes": 1,
+        "no-use-before-define": 0,
+        "eol-last": 1,
+        "no-mixed-spaces-and-tabs": 2,
+        "radix":1,
+        "semi": 1,
+        "brace-style": [1, "stroustrup"],
+        "no-space-before-semi": 1,
+        "space-return-throw-case": 1,
+        "no-spaced-func": 1,
+        "space-after-keywords":[1, "never"],
+        "new-cap":[2, "newIsCap"],
+        "vars-on-top": 2,
+        "no-trailing-spaces": 0
+    },
+    "globals": {
+        "$": true
+    }
+}

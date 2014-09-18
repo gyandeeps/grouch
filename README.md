@@ -1,4 +1,4 @@
-grouch
+Grouch
 ======
 
 Test runner for any front end project.
