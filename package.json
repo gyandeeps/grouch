@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "eslint": ">=0.8.0",
+        "grunt": "0.4.5",
         "grunt-contrib-jasmine": ">=0.7.0",
         "grunt-template-jasmine-istanbul": ">=0.3.0",
         "optionator": ">=0.4.0",
