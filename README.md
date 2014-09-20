@@ -1,3 +1,6 @@
+[![NPM version](https://badge.fury.io/js/grouch.svg)](http://badge.fury.io/js/grouch)
+[![Build Status](https://travis-ci.org/gyandeeps/grouch.svg?branch=master)](http://travis-ci.org/gyandeeps/grouch)
+
 Grouch
 ======
 
@@ -18,3 +21,7 @@ Options:
   -i, --ignorePath [path::String]  Supply a collection of ignore paths. - default: []
   -c, --codeCoverage               Code coverage should be done. - default: true
 ```
+
+##Future
+
+Check out the [Grouch Roadmap](https://github.com/gyandeeps/grouch/wiki/Release-Goals).

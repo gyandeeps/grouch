@@ -47,5 +47,6 @@
         "karma",
         "javascript",
         "code quality"
-    ]
+    ],
+    "preferGlobal": true
 }
