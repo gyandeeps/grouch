@@ -31,9 +31,6 @@
         "jsdoc": "latest",
         "sinon": ">=1.10.3"
     },
-    "peerDependencies": {
-        "grunt": ">=0.4.5"
-    },
     "engines": {
         "node": ">=0.10.28"
     },
