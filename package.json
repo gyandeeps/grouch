@@ -36,7 +36,10 @@
     },
     "scripts": {
         "test": "node Makefile test",
-        "docs": "node Makefile docs"
+        "docs": "node Makefile docs",
+        "patch": "node Makefile.js patch",
+        "minor": "node Makefile.js minor",
+        "major": "node Makefile.js major"
     },
     "keywords": [
         "jasmine",

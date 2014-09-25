@@ -25,6 +25,19 @@ function fileType(extension){
     };
 }
 
+function release(type){
+    exec("echo Bumping up the version");
+    exec("npm version " + type);
+
+    exec("echo Commiting master with tags");
+    exec("git push origin --tags");
+
+    exec("echo Publish on NPM");
+    exec("npm publish");
+
+    exec("echo Operation done.");
+}
+
 target.test = function(){
     var errors = 0;
     var lastRun;
@@ -77,4 +90,16 @@ target.lint = function(){
 target.docs = function(){
     echo("Generating jsdoc for js files");
     exec(jsdoc + "lib");
+};
+
+target.patch = function(){
+    release("patch");
+};
+
+target.minor = function(){
+    release("minor");
+};
+
+target.major = function(){
+    release("major");
 };
