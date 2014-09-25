@@ -30,6 +30,8 @@ function release(type){
     exec("npm version " + type);
 
     exec("echo Commiting master with tags");
+    exec("git add package.json");
+    exec("git commit --amend --no-edit");
     exec("git push origin --tags");
 
     exec("echo Publish on NPM");
