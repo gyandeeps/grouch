@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Run test files",
   "author": "Gyandeep Singh <gyandeeps@gmail.com>",
-  "license": "MIT",
+  "license": "BSD",
   "repository": "https://github.com/gyandeeps/grouch",
   "main": "./lib/api.js",
   "bin": {
