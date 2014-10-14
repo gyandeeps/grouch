@@ -7,6 +7,7 @@ Grouch
 Test runner for any front end project.
 
 It runs unit test using `jasmine` and does code coverage using `istanbul`.
+It also does Javascript lint using [Eslint](http://eslint.org).
 
 ##Options
 
@@ -17,9 +18,10 @@ Options:
   -s, --src path::String           Source file location. - default: ./src/main
   -t, --srcTest path::String       Test file location - default: ./src/test
   -m, --mock [path::String]        Path of the mock files directory - default: []
-  -c, --config path::String        Load configuration data from this file. (FUTURE)
+  -c, --config path::String        Load configuration data from this file.
   -i, --ignorePath [path::String]  Supply a collection of ignore paths. - default: []
-  -b, --codeCoverage               Code coverage should be done. - default: true
+  --coverage                       Code coverage should be done. - default: true
+  --lint                           Lint the Javascript code with eslint. - default: true
 ```
 
 ##Usage
@@ -35,6 +37,12 @@ To install it at global level, open cmd and run this command
 
 ```.sh
 npm install -g grouch
+```
+
+If already installed use the following command to update it
+
+```.sh
+npm update -g grouch
 ```
 
 Now in you cmd window, you should be able to say
@@ -56,11 +64,14 @@ It will also load some mock files from `test/mock1` and `test/mock2`. Mocks woul
 test files when running the tests.
 Important thing to note here is that from the source folder it will ignore all the files which have a `.min.js` extension.
 
-After running the top command, in side your project base you would see `_SpecRunner.html` for your jasmine run and
-you should see `coverage` folder. Inside coverage folder, you would see `index.html`. which has your code coverage stats.
+After running the top command, in side your project base you would see `_SpecRunner.html` for your jasmine run, 
+`eslintReport.html` for the Javascript lint for the srcFiles and you should see `coverage` folder. Inside coverage folder, 
+you would see `index.html`,which has your code coverage stats.
 
 Now you can use `_SpecRunner.html` to run your test in different browsers but in the future we would integrate `karma` to
 automatically run these test for you in different browsers.
+
+All the boolean options can be turned off by using the prefix `--no-`. Example `--no-lint`, `--no-coverage`.
 
 **Note:** This project automatically loads `jquery 1.11` version before your `mocks`, `src` and `test` files. 
 If you project has jquery built into it then it will override the 1.11 version with your version. 
