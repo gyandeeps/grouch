@@ -22,6 +22,7 @@ Options:
   -i, --ignorePath [path::String]  Supply a collection of ignore paths. - default: []
   --coverage                       Code coverage should be done. - default: true
   --lint                           Lint the Javascript code with eslint. - default: true
+  -b, --browsers [String]          Run in different browsers using karma.
 ```
 
 ##Usage
@@ -45,7 +46,7 @@ If already installed use the following command to update it
 npm update -g grouch
 ```
 
-Now in you cmd window, you should be able to say
+Now in your cmd window, you should be able to say
 
 ```.sh
 grouch -h
@@ -64,17 +65,32 @@ It will also load some mock files from `test/mock1` and `test/mock2`. Mocks woul
 test files when running the tests.
 Important thing to note here is that from the source folder it will ignore all the files which have a `.min.js` extension.
 
-After running the top command, in side your project base you would see `_SpecRunner.html` for your jasmine run, 
-`eslintReport.html` for the Javascript lint for the srcFiles and you should see `coverage` folder. Inside coverage folder, 
+After running the top command, in side your project base you would see `specRunner.html` for your jasmine run,
+`eslintReport.html` for the Javascript lint for the srcFiles and you should see `coverage` folder. Inside coverage folder,
 you would see `index.html`,which has your code coverage stats.
 
-Now you can use `_SpecRunner.html` to run your test in different browsers but in the future we would integrate `karma` to
-automatically run these test for you in different browsers.
+`Karma` has been integrated with `grouch`. Use `-b` or `--browsers` option to specify which browser you want to run your tests on.
+We support the following browsers:
+* Internet Explorer (command use `-b ie`)
+    - IE8 (command use `-b ie8`)
+    - IE9 (command use `-b ie9`)
+    - IE10 (command use `-b ie10`)
+    - IE11 (command use `-b ie11`)
+* Chrome (command use `-b chrome`)
+* Firefox (command use `-b firefox`)
+* Safari (command use `-b safari`)
+
+You can specify multiple browsers like this:
+```.sh
+grouch -s src/main/js -t test/js -b chrome -b ie8 -b firefox
+```
+Make sure you have these browsers installed on your machine because karma uses the exe installed on the machine.
 
 All the boolean options can be turned off by using the prefix `--no-`. Example `--no-lint`, `--no-coverage`.
 
-**Note:** This project automatically loads `jquery 1.11` version before your `mocks`, `src` and `test` files. 
-If you project has jquery built into it then it will override the 1.11 version with your version. 
+**Note:** This project automatically loads `jquery 1.11.2` version before your `mocks`, `src` and `test` files.
+If you project has jquery built into it then it will override the 1.11.2 version with your version.
+We also load [sinonjs fake server](http://sinonjs.org/docs/#fakeServer) module to be used to fake `XMLHttpRequest`.
 
 ##Contribution
 
