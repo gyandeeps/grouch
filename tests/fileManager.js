@@ -17,9 +17,11 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/x.js"),
                     path.resolve(process.cwd(), "tests/resources/y.js"),
                     path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
-                    path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js")
+                    path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
-                assert.lengthOf(files, 4);
+                assert.lengthOf(files, 6);
                 assert.sameMembers(files, expectedFiles);
                 done();
             });
@@ -43,9 +45,11 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/x.js"),
                     path.resolve(process.cwd(), "tests/resources/y.js"),
                     path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
-                    path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js")
+                    path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
-                assert.lengthOf(files, 4);
+                assert.lengthOf(files, 6);
                 assert.sameMembers(files, expectedFiles);
                 done();
             });
@@ -55,9 +59,11 @@ describe("File manager ", function(){
             fileManager.loadFiles("tests/resources", "**/dummyFiles/**", "", function(files){
                 var expectedFiles = [
                     path.resolve(process.cwd(), "tests/resources/x.js"),
-                    path.resolve(process.cwd(), "tests/resources/y.js")
+                    path.resolve(process.cwd(), "tests/resources/y.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
+                    path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
-                assert.lengthOf(files, 2);
+                assert.lengthOf(files, 4);
                 assert.sameMembers(files, expectedFiles);
                 done();
             });
@@ -88,7 +94,9 @@ describe("File manager ", function(){
                 path.resolve(process.cwd(), "tests/resources/x.js"),
                 path.resolve(process.cwd(), "tests/resources/y.js"),
                 path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
-                path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js")
+                path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js"),
+                path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
+                path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
             ];
             var expectedMockFiles = [
                 path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
@@ -111,7 +119,9 @@ describe("File manager ", function(){
                 path.resolve(process.cwd(), "tests/resources/x.js"),
                 path.resolve(process.cwd(), "tests/resources/y.js"),
                 path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
-                path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js")
+                path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js"),
+                path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
+                path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
             ];
             var expectedMocks = [
                 path.resolve(process.cwd(), "tests/resources/x.js"),

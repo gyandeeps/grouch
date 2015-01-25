@@ -7,7 +7,7 @@ require("shelljs/make");
 var eslint = require("eslint").cli;
 var nodeCli = require("shelljs-nodecli");
 var jsFiles = find("lib/").filter(fileType("js")).join(" ");
-var jsTestFiles = find("tests/").filter(fileType("js")).join(" ");
+var jsTestFiles = find("tests/").filter(fileType("js")).filter(excludeByDirectory("resources")).join(" ");
 var nodeModules = "./node_modules/";
 var mocha = nodeModules + "mocha/bin/_mocha ";
 var jsdoc = "jsdoc -c ./conf.json ";
@@ -22,6 +22,14 @@ var jsdoc = "jsdoc -c ./conf.json ";
 function fileType(extension){
     return function(filename){
         return filename.substring(filename.lastIndexOf(".") + 1) === extension;
+    };
+}
+
+function excludeByDirectory(dirName){
+    return function(filename){
+        return !filename.split("/").some(function(name){
+            return name.toUpperCase() === dirName.toUpperCase();
+        });
     };
 }
 
