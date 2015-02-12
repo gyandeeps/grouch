@@ -6,10 +6,10 @@ Grouch
 
 Test runner for any front end project.
 
-It runs unit test using `jasmine` and does code coverage using `istanbul`.
+It runs unit test using `jasmine` and does code coverage using `istanbul`. It also supports `karma` to run tests in different browsers.
 It also does Javascript lint using [Eslint](http://eslint.org).
 
-##Options
+## Options
 
 ```
 Options:
@@ -25,7 +25,7 @@ Options:
   -b, --browsers [String]          Run in different browsers using karma.
 ```
 
-##Usage
+## Usage
 
 The project should be used as CLI tool so that's why we require it to be installed globally.
 The benefits for installing it at globally are:
@@ -90,14 +90,14 @@ All the boolean options can be turned off by using the prefix `--no-`. Example `
 
 **Note:** This project automatically loads `jquery 1.11.2` version before your `mocks`, `src` and `test` files.
 If you project has jquery built into it then it will override the 1.11.2 version with your version.
-We also load [sinonjs fake server](http://sinonjs.org/docs/#fakeServer) module to be used to fake `XMLHttpRequest`.
+We also load [sinonJs fake server](http://sinonjs.org/docs/#fakeServer) module to be used to fake `XMLHttpRequest`.
 
-##Contribution
+## Contribution
 
 Please feel free to log issues and even send pull request for the changes.
 Make sure you log a issue before you send in a pull request and reference that issue in your pull request.
 That way everyone knows what did you fix or add to the project.
 
-##Future
+## Future
 
 Check out the [Grouch Roadmap](https://github.com/gyandeeps/grouch/wiki/Release-Goals).

@@ -20,7 +20,7 @@
         "space-in-brackets": [2, "never"],
         "space-in-parens": [2, "never"],
         "space-return-throw-case": 2,
-        "new-cap":[2, "newIsCap"],
+        "new-cap": 2,
         "vars-on-top": 2,
         "no-trailing-spaces": 0,
         "indent": [2, 4, {
