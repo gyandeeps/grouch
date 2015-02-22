@@ -79,6 +79,7 @@ We support the following browsers:
 * Chrome (command use `-b chrome`)
 * Firefox (command use `-b firefox`)
 * Safari (command use `-b safari`)
+* Opera (command use `-b opera`)
 
 You can specify multiple browsers like this:
 ```.sh
