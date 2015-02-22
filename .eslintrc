@@ -15,7 +15,10 @@
         "no-space-before-semi": 2,
         "no-spaced-func": 2,
         "space-after-keywords":[2, "never"],
-        "space-after-function-name": [2, "never"],
+        "space-before-function-parentheses": [2, {
+            "anonymous": "never",
+            "named": "never"
+        }],
         "space-before-blocks": [2, "never"],
         "space-in-brackets": [2, "never"],
         "space-in-parens": [2, "never"],
