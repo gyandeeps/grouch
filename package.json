@@ -1,6 +1,6 @@
 {
   "name": "grouch",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Test runner and linter for any front end project",
   "author": "Gyandeep Singh <gyandeeps@gmail.com>",
   "license": "BSD",
