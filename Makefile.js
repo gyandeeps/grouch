@@ -11,6 +11,7 @@ var jsTestFiles = find("tests/").filter(fileType("js")).filter(excludeByDirector
 var nodeModules = "./node_modules/";
 var mocha = nodeModules + "mocha/bin/_mocha ";
 var jsdoc = "jsdoc -c ./conf.json ";
+
 /*eslint-enable vars-on-top */
 
 /**

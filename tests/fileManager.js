@@ -21,6 +21,7 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
                     path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
+
                 assert.lengthOf(files, 6);
                 assert.sameMembers(files, expectedFiles);
                 done();
@@ -33,6 +34,7 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/dummyFiles/a.css"),
                     path.resolve(process.cwd(), "tests/resources/dummyFiles/b.css")
                 ];
+
                 assert.lengthOf(files, 2);
                 assert.sameMembers(files, expectedFiles);
                 done();
@@ -49,6 +51,7 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
                     path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
+
                 assert.lengthOf(files, 6);
                 assert.sameMembers(files, expectedFiles);
                 done();
@@ -63,6 +66,7 @@ describe("File manager ", function(){
                     path.resolve(process.cwd(), "tests/resources/project/src/src.js"),
                     path.resolve(process.cwd(), "tests/resources/project/test/srcSpec.js")
                 ];
+
                 assert.lengthOf(files, 4);
                 assert.sameMembers(files, expectedFiles);
                 done();
@@ -102,6 +106,7 @@ describe("File manager ", function(){
                 path.resolve(process.cwd(), "tests/resources/dummyFiles/a.js"),
                 path.resolve(process.cwd(), "tests/resources/dummyFiles/b.js")
             ];
+
             fileManager.loadFileCollection(this.fileCollection, "", "", function(dirCollection){
                 Object.keys(dirCollection).forEach(function(item){//just to flatten the array
                     dirCollection[item] = dirCollection[item].concat.apply([], dirCollection[item]).reverse();

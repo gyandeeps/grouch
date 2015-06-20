@@ -35,7 +35,8 @@
     "istanbul": ">=0.3.2",
     "shelljs-nodecli": ">=0.1.1",
     "jsdoc": "latest",
-    "sinon": ">=1.10.3"
+    "sinon": ">=1.10.3",
+    "eslint-config-ideal": "^0.1.0"
   },
   "engines": {
     "node": ">=0.10.28"
