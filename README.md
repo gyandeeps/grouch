@@ -1,5 +1,6 @@
 [![NPM version](https://badge.fury.io/js/grouch.svg)](http://badge.fury.io/js/grouch)
 [![Build Status](https://travis-ci.org/gyandeeps/grouch.svg?branch=master)](http://travis-ci.org/gyandeeps/grouch)
+[![Build status](https://ci.appveyor.com/api/projects/status/npl9r6mydk8ryva4/branch/master?svg=true)](https://ci.appveyor.com/project/gyandeeps/grouch/branch/master)
 
 Grouch
 ======
