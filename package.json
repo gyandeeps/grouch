@@ -15,7 +15,7 @@
   "dependencies": {
     "eslint": "0.15.0",
     "grunt": "0.4.5",
-    "grunt-contrib-jasmine": "0.7.0",
+    "grunt-contrib-jasmine": "git+https://github.com/gyandeeps/grunt-contrib-jasmine.git#issue",
     "grunt-template-jasmine-istanbul": "0.3.0",
     "optionator": "0.4.0",
     "node-dir": "0.1.6",
